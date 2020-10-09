@@ -2,29 +2,19 @@
 The website will redirect them to the approiate site, employee, HR, and Manager -->
 <?php 
 include"header.php";
-?>
 
-<body>
-    <header class="top-part">
-        <div id="contactUs">
-                <!-- We are going to combine the rent and purchases into one page -->
-                <ul>
-                    <li><a href="#contact Us">Contact Us</a></li>
-                <ul>                
-            </div><!-- End of Navigation --> 
-        <img src="Images/logo2.jpeg">
-            <!-- <a href="http://example.com"><img src="Images/logo2.jpeg"></a> -->
-            <!-- <a href="http://example.com"><img src="Images/hr.png" /></a> -->
+?>    
+    <!-- Will redo the login system at a later date and will use this tutorial for login system, 
+    I used this once before and it seemed to work just fine - https://www.youtube.com/watch?v=LC9GaXkdxF8  -->
+    <!-- This is just placeholder for right now....-->
+    <div class="login">
+        <h2>Welcome To The Employee Managment System</h2>
+        <div id="loginText">
+            Username: <input type="text" name="username" placeholder="Username" required> <br /><br />
+            Password: <input type="password" name="password" placeholder="Password" required> <br /><br />
+            <input type="submit" value="Login">
+        </div>
+    </div>
 
-	</header>
-
-<div class="middle-part">
-<h2>Welcome To The Employee Managment System</h2>
-<button type="button">Sign in</button>
-</div>
-
-
-
-</body>
-
-</html>
+    <!-- Get rid o""f - only for dev build -->
+<?php include"footer.php"; ?>

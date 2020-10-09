@@ -11,14 +11,14 @@ body{
     width:120px;
     height:auto;
 }
-.middle-part{
-    /* background:  url('../worker.png'); */
+/* .middle-part{
+    background:  url('../worker.png');
     background-repeat: no-repeat;
     background-position: 100% 20%;
     text-align: left;
     padding:8em;
     
-}
+} */
 
 .ftr_nav_menu{
     background-color: tan;
@@ -39,6 +39,9 @@ body{
 /* ------------------------------------- */
 /* Code from my other project - Keith 
    Modified for this project*/
+
+/* Saving this part so we can repurpose the code for other sites if
+we need to repurpose the code */
 /* #navigation{
     background-color: lightgray;
     color: white;

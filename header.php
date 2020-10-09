@@ -12,4 +12,12 @@ echo "<!DOCTYPE html>
     <link rel='stylesheet' href='index.css'>
 
 </head>";
+echo"
+<body>
+	<header class='top-part'>
+		<img src='Images/logo2.jpeg'>
+			<!-- <a href='http://example.com'><img src='Images/logo2.jpeg'></a> -->
+			<!-- <a href='http://example.com'><img src='Images/hr.png' /></a> -->
+	</header>
+	<br /><br />";
 ?>
