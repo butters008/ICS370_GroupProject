@@ -7,6 +7,7 @@ include"header.php";
     <!-- Will redo the login system at a later date and will use this tutorial for login system, 
     I used this once before and it seemed to work just fine - https://www.youtube.com/watch?v=LC9GaXkdxF8  -->
     <!-- This is just placeholder for right now....-->
+    <br /><br />
     <div class="login">
         <h2>Welcome To The Employee Managment System</h2>
         <div id="loginText">

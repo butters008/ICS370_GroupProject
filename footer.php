@@ -11,8 +11,8 @@ echo "
     <ul class='onlyForDev'>
         <li><a href='index.php'>Index/Login Page</a></li>
         <li><a href='employee.php'>employee page</a></li>
-        <li><a href='#HR'>HR page</a></li>
-        <li><a href='#manager'>manager page</a></li>
+        <li><a href='hr.php'>HR page</a></li>
+        <li><a href='manager.php'>manager page</a></li>
     </ul>
 </footer>
 
