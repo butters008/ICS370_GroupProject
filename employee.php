@@ -1,4 +1,45 @@
-<?php include "header.php"; ?>
+<?php 
+  include "header.php"; 
+  // global $db;
+
+
+?>
+
+<?php 
+  // $servername = "SoftwareDB01";
+  $servername = "127.0.0.1";
+  $database = "SoftwareDB02";
+  $username = "readtest";
+  $password = 'password';
+
+  // Create connection
+  $conn = mysqli_connect($servername, $username, $password, $database);
+
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  // else{
+  //   echo "Connected successfully";
+  // }
+
+  $sql = "SELECT * FROM Employee WHERE EmployeeID = 1";  //check what embedded sql is
+
+  $result = $conn->query($sql);
+  // $result = $conn->query($sql);
+
+  // if ($result->num_rows > 0) {
+  //   // output data of each row
+  //   while($row = $result->fetch_assoc()) {
+  //     echo "id: " . $row["EmployeeID"]. " - Name: " . $row["FirstName"]. " " . $row["LastName"]. "<br>";
+  //   }
+  // } else {
+  //   echo "0 results";
+  // }
+
+  // mysqli_close($conn);
+?>
+
 <!-- Keith - What I envision for the employee page is just going to be a lot of POSTs 
 from the server and maybe a request form to change their address or have the ability to
 change that from their end.  Depending on company and company policy and how strict they want
@@ -13,18 +54,41 @@ it to be.   -->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
-</div>
+  </div>
     <section class="profile">
+
+      <div class="container center">
+     
         <div id="profileBasicInfo">
-            <h3>Employee Fname</h3> <!-- Dynamically log in employee name -->
-            <h3>Employee Lname</h3> <!-- Dynamically log in employee name -->
-            <img src="Images/ppExample.png" alt="Picture of Employee" id="profilePic">
+        <?php 
+          if ($result->num_rows > 0) {
+          // output data of each row
+            while($row = $result->fetch_assoc()) {
+              echo "<h3> Employee ID: " . $row["EmployeeID"]. "</h3><h3>Name: " . $row["FirstName"]. " " . $row["LastName"]. "</h3><br>";
+            }
+          } else {
+            echo "0 results";
+          }
+        ?>
+          <img src="Images/ppExample.png" alt="Picture of Employee" id="profilePic">
         </div>
         <div id="profilePageInfo">
             
             <p>This is basic info</p>
         </div>
+        <?php //else: ?>
+          <!-- <h5>Issue Loading Information!</h5> -->
+        <?php //endif ?> 
         
+        
+        <!-- <div id="profileBasicInfo">
+            <h3><b>Employee Fname</b></h3>
+            <h3><b>Employee Lname</b></h3> 
+            <img src="Images/ppExample.png" alt="Picture of Employee" id="profilePic">
+        </div>
+        <div id="profilePageInfo">    
+            <p>This is basic info</p>         -->
+    
     </section>
 
 </main>
