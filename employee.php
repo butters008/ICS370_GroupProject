@@ -6,38 +6,11 @@
 ?>
 
 <?php 
-  // $servername = "SoftwareDB01";
-  $servername = "127.0.0.1";
-  $database = "SoftwareDB02";
-  $username = "readtest";
-  $password = 'password';
 
-  // Create connection
-  $conn = mysqli_connect($servername, $username, $password, $database);
-
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-  // else{
-  //   echo "Connected successfully";
-  // }
 
   $sql = "SELECT * FROM Employee WHERE EmployeeID = 1";  //check what embedded sql is
 
   $result = $conn->query($sql);
-  // $result = $conn->query($sql);
-
-  // if ($result->num_rows > 0) {
-  //   // output data of each row
-  //   while($row = $result->fetch_assoc()) {
-  //     echo "id: " . $row["EmployeeID"]. " - Name: " . $row["FirstName"]. " " . $row["LastName"]. "<br>";
-  //   }
-  // } else {
-  //   echo "0 results";
-  // }
-
-  // mysqli_close($conn);
 ?>
 
 <!-- Keith - What I envision for the employee page is just going to be a lot of POSTs 
