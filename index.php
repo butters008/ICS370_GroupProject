@@ -8,8 +8,8 @@
     <div class="topnav" id="myTopnav">
         <?php 
             if (isset($_SESSION["useruid"])){
-                echo '<a href="employee.php" class="active">Profile</a>';
-                echo '<a href="#news">Projects</a>';
+                echo '<a href="index.php" class="active">Home</a>';
+                echo '<a href="project.php">Projects</a>';
                 echo '<a href="#contact">Paystubs</a>';
             }
             else {
