@@ -1,10 +1,5 @@
-<?php 
-	// include "includes/dbh.inc.php";
-	include "dbh.inc.php";
-?>
-
 <!DOCTYPE html>
-<html lang=''>
+<html lang='en'>
 <head>
 	<meta charset='utf-8'>
 	<title>Employee Management System</title>

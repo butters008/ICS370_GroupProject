@@ -1,14 +1,9 @@
 <?php
-echo "WTF <br><br>";
 if(isset($_POST["submit"])){
-    // echo " AFTER IF FOR SUBMIT <br>";
     $username = $_POST["uid"];
     $pwd = $_POST["pwd"];
 
-    // echo " BEFORE require_once dbh.inc.php <br>";
     require_once "dbh.inc.php";
-    // require_once "signup.inc.php";
-
     // include "functions.inc.php";
 
 
@@ -63,16 +58,17 @@ if(isset($_POST["submit"])){
         $pwdHashed = $uidExist["userPwd"];
         $checkPwd = password_verify($pwd, $pwdHashed);
 
-        echo "checkPwd";
-        echo $checkPwd;
+        // echo "checkPwd";
+        // echo $checkPwd;
         if ($checkPwd === false){
             header("location: ../index.php?error=wrong_Password");
             exit();
         }
         else if($checkPwd === true){
             session_start();
-            $_SESSION["userID"] = $uidExist["uid"];
-            header("location: ../employee.php");
+            //Need to break this into three different
+            $_SESSION["useruid"] = $uidExist["userUID"];
+            header("location: ../index.php?=".$username);
             exit();
         }
 

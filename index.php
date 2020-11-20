@@ -1,23 +1,60 @@
-<!-- We are going to have the index page be the login, and from the login,
-The website will redirect them to the approiate site, employee, HR, and Manager -->
 <?php 
-include "header.php";
+  include "header.php";
+  session_start(); 
+?>
 
-?>    
-    <!-- Will redo the login system at a later date and will use this tutorial for login system, 
-    I used this once before and it seemed to work just fine - https://www.youtube.com/watch?v=LC9GaXkdxF8  -->
-    <!-- This is just placeholder for right now....-->
-    <br /><br />
-    <div class="login">
-        <h2>Employee Login</h2>
-        <div id="loginText">
-            <form action="login.inc.php" method="post">
-                <input type="text" name="uid" placeholder="username..." required> <br /><br />
-                <input type="password" name="pwd" placeholder="password..." required> <br /><br />
-                <button type="submit" name="submit">Log in</button>
-            </form>
+<!-- This is going to be Employee Profile -->
+<main>
+    <div class="topnav" id="myTopnav">
+        <?php 
+            if (isset($_SESSION["useruid"])){
+                echo '<a href="employee.php" class="active">Profile</a>';
+                echo '<a href="#news">Projects</a>';
+                echo '<a href="#contact">Paystubs</a>';
+            }
+            else {
+                echo '<a href="login.php" class="active">login</a>';
+            }
+        ?>
+        
+  </div>
+    <section class="profile">
+
+      <div class="container center">
+     
+        <div id="profileBasicInfo">
+        <?php 
+          // if ($result->num_rows > 0) {
+          // // output data of each row
+          //   while($row = $result->fetch_assoc()) {
+          //     echo "<h3> Employee ID: " . $row["EmployeeID"]. "</h3><h3>Name: " . $row["FirstName"]. " " . $row["LastName"]. "</h3><br>";
+          //   }
+          // } else {
+          //   echo "0 results";
+          // }
+        ?>
+          <img src="Images/ppExample.png" alt="Picture of Employee" id="profilePic">
         </div>
-    </div>
+        <div id="profilePageInfo">
+            
+            <p>This is basic info</p>
+        </div>
+        <?php //else: ?>
+          <!-- <h5>Issue Loading Information!</h5> -->
+        <?php //endif ?> 
+        
+        
+        <!-- <div id="profileBasicInfo">
+            <h3><b>Employee Fname</b></h3>
+            <h3><b>Employee Lname</b></h3> 
+            <img src="Images/ppExample.png" alt="Picture of Employee" id="profilePic">
+        </div>
+        <div id="profilePageInfo">    
+            <p>This is basic info</p>         -->
+    
+    </section>
 
-    <!-- Get rid o""f - only for dev build -->
+</main>
+
+
 <?php include "footer.php"; ?>
