@@ -100,4 +100,32 @@ if ($result->num_rows > 0) {
 	// 	}
   // }
 
+
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo '<tr> 
+                <td><a href="movies_info.php?movie_id='.$row['movie_id'].'" ?><b>'.$row["movie_id"].'</b></td>
+                <td><a href="movies_info.php?movie_id='.$row['movie_id'].'" ?><b>'.$row["movie_name_native"].'</b></td>
+                <td>'.$row["movie_name_english"].'</td>
+                <td>'.$row["movie_year"].'</td>
+                <td>'.$row["language"].'</td>
+                <td>'.$row["country"].' </span> </td>
+                <td>'.$row["plot"].'</td>
+                <td>'.$row["genre"].'</td>
+                <td>'.$row["trivia"].'</td>
+                <td>'.$row["keyword"].'</td>
+                <td><img src = "images/'.$row["movie_poster"].'" width="200" height="200 "></td>
+                <td><img src = "images/'.$row["photo_stills"].'" width="200" height="200" > </td>
+                <td><a href="delete.php?delete='.$row['movie_id'].'" class = "btn btn-danger"; ?>Delete</td>
+            </tr>';
+
+    }//end while
+}//end if
+else {
+    echo "0 results";
+}//end else
+$result->close();
+
 ?>
