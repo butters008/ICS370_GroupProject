@@ -5,24 +5,52 @@
 
 <!-- This is going to be Employee Profile -->
 <main>
-    <div class="topnav" id="myTopnav">
-        <?php 
-            if (isset($_SESSION["useruid"])){
-                echo '<a href="index.php" class="active">Home</a>';
-                echo '<a href="project.php">Projects</a>';
-                echo '<a href="#contact">Paystubs</a>';
-            }
-            else {
-                echo '<a href="login.php" class="active">login</a>';
-            }
-        ?>
-        
-  </div>
-    <section class="profile">
 
-      <div class="container center">
-     
-        <div id="profileBasicInfo">
+<?php 
+    if (isset($_SESSION["useruid"])){
+      echo '
+      <div class="topnav" id="myTopnav">
+        <a href="index.php" class="active">Home</a>
+        <a href="project.php">Projects</a>
+        <a href="includes/logout.inc.php">Logout</a>
+      </div>'; #End of navigation bar
+
+      echo '
+      <section class="profile">
+        <div class="container center">
+          <div id="profileBasicInfo">
+            <img src="Images/ppExample.png" alt="Picture of Employee" id="profilePic">
+          </div>
+          <div id="profilePageInfo"><br><br><br>
+            <table class="projectList" style="margin: auto;">
+              <thead>
+                <tr>
+                  <th>Project Name</th>
+                  <th>Project Type</th>
+                  <th>Project Quote</th>
+                  <th>Project Expense</th>
+                  <th>Total Income</th>
+                </tr>
+              </thead>
+              <tbody> ';
+              
+              
+      
+              echo '  
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>';
+      echo '';
+    }
+    else {
+      header("location: ../ICS370_GroupProject/login.php");          
+    }
+?>
+        
+
         <?php 
           // if ($result->num_rows > 0) {
           // // output data of each row
@@ -33,12 +61,9 @@
           //   echo "0 results";
           // }
         ?>
-          <img src="Images/ppExample.png" alt="Picture of Employee" id="profilePic">
+
         </div>
-        <div id="profilePageInfo">
-            
-            <p>This is basic info</p>
-        </div>
+        
         <?php //else: ?>
           <!-- <h5>Issue Loading Information!</h5> -->
         <?php //endif ?> 

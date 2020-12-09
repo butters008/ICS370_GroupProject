@@ -145,3 +145,60 @@ display: none;
 }
 }
 /*--------------------------------------*/
+
+
+
+main{
+    /* padding: 15px; */
+    margin: auto;
+    min-height: 500px;;
+}
+.profile{
+    background-color: aquamarine;
+}
+#profileBasicInfo{
+    float: left;
+    margin-left: 35px;
+    margin-right: 25px;
+    width: 200px;
+    min-height: 300px;
+    background-color: aquamarine;
+    text-align: center;
+    /* border: black;
+    border-radius: 2px; */
+}
+#profilePic{
+    width: 200px;
+    height: 150px;
+}
+
+#profilePageInfo{
+    min-width: 500px;
+    min-height: 500px;
+    background-color: coral;
+    margin: auto;
+}
+
+.login{
+    margin: auto;
+    text-align: center;
+    height: 300px;
+}
+
+#form{
+    margin: auto;
+    text-align: center;
+    height: 300px;
+}
+
+.projectList{
+    /* margin: auto; */
+    text-align: center;
+}
+
+.projectList th td{
+    width: 200px;
+    min-height: 25;
+    background-color: #ddd;
+    /* margin: auto;     */
+}
