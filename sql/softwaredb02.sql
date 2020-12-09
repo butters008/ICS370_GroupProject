@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2020 at 12:07 AM
+-- Generation Time: Dec 09, 2020 at 02:39 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -79,7 +79,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userID`, `userName`, `userEmail`, `userUID`, `userPwd`) VALUES
-(1, 'Admin', 'admin@test.com', 'admin', '$2y$10$Qa1jjZFPO5kJC1xERyJr2ulF7mn/py8zm02jSQAN7Zi.tLbPVc33W');
+(1, 'Admin', 'admin@test.com', 'admin', '$2y$10$Qa1jjZFPO5kJC1xERyJr2ulF7mn/py8zm02jSQAN7Zi.tLbPVc33W'),
+(2, 'Keith Merrett Butterfield', 'k.butterfield08@gmail.com', 'test', '$2y$10$C8zeJoTeWKBSSC6xgLFi4uJP03v7436Gz9E3ROh.d4qcqxHtWi0XS');
 
 -- --------------------------------------------------------
 
@@ -131,7 +132,7 @@ ALTER TABLE `project`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `worker`
