@@ -9,11 +9,8 @@
 	<meta name='description' content='Example description'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<link rel='stylesheet' href='Style/my.css'>
-    <link rel='icon' type='image/x-icon' href=''/>
-    <link rel='stylesheet' href='Style/index.css'>
-    <link rel='stylesheet' href='Style/employee.css'>
-
 </head>
+
 <body>
 	<header class='top-part'>
 		<img src='Images/logo2.jpeg'>

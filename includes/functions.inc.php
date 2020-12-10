@@ -86,20 +86,20 @@ function createUser($conn, $name, $email, $username, $pwd) {
     header("location: ../signup.php?error=none");
 }
 
-function createProject($conn, $pName, $pType, $pQuote, $pAddress, $pCity, $pZip){
-    $sql = "INSERT INTO project (project_name, project_type, project_quote, project_address, project_City, project_Zip) VALUES (?, ?, ?, ?, ?, ?);";
-    $stmt = mysqli_stmt_init($conn);
+// function createProject($conn, $pName, $pType, $pQuote, $pAddress, $pCity, $pZip){
+//     $sql = "INSERT INTO project (project_name, project_type, project_quote, project_address, project_City, project_Zip) VALUES (?, ?, ?, ?, ?, ?);";
+//     $stmt = mysqli_stmt_init($conn);
     
-    if (!mysqli_stmt_prepare($stmt, $sql)){
-        header("location: ../project.php?error=stmtFailed");
-        exit();
-    }
+//     if (!mysqli_stmt_prepare($stmt, $sql)){
+//         header("location: ../project.php?error=stmtFailed");
+//         exit();
+//     }
 
-    mysqli_stmt_bind_param($stmt, 'ssssss', $pName, $pType, $pQuote, $pAddress, $pCity, $pZip);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    header("location: ../project.php?error=none");
-}
+//     mysqli_stmt_bind_param($stmt, 'ssssss', $pName, $pType, $pQuote, $pAddress, $pCity, $pZip);
+//     mysqli_stmt_execute($stmt);
+//     mysqli_stmt_close($stmt);
+//     header("location: ../index.php?error=none");
+// }
 
 
 

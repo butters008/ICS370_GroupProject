@@ -1,6 +1,6 @@
 <?php 
     include "header.php";
-    include "includes/dbh.inc.php";
+    // include "includes/dbh.inc.php";
     session_start(); 
 ?>
 
@@ -42,8 +42,8 @@
 
         <tbody>
 <?php
-$sql = "SELECT * FROM project;";
-$result = mysqli_query($sql);
+// $sql = "SELECT * FROM project;";
+// $result = mysqli_query($sql);
 
 while($row = mysql_fetch_array($conn, $result)){   //Creates a loop to loop through results
     echo "<tr>";

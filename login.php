@@ -16,8 +16,11 @@ include "header.php";
                 <input type="password" name="pwd" placeholder="password..." required> <br /><br />
                 <button type="submit" name="submit">Log in</button>
             </form>
+            <br><br>
+            <h4>Don't have an account?  <a href="signup.php">Sign up</a></h4>
+
         </div>
     </div>
 
-    <!-- Get rid o""f - only for dev build -->
-<?php include "footer.php"; ?>
+</body>
+</html>

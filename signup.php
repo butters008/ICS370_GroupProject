@@ -1,16 +1,5 @@
 <?php 
 include "header.php";
-
-//Will do error checking on this page later
-    // if(isset($_GET["error"])){
-    //     if ($_GET["error"] == "emptyfield");
-    //     echo "Fill in the fields";
-    // }
-    // else if(isset($_GET["error"])){
-    //     if ($_GET["error"] == "invalidUID");
-    //     echo "Choose Proper Username!";
-    // }
-
 ?>    
     <!-- https://www.youtube.com/watch?v=gCo6JqGMi30 -->
     <br /><br />
@@ -25,7 +14,10 @@ include "header.php";
                 <input type="password" name="pwdrepeat" placeholder="repeat password..." required> <br /><br />
                 <button type="submit" name="submit">Create Account</button>
             </form>
+            <br><br>
+            <h4>Already have an account?  <a href="login.php">Log in</a></h4>
         </div>
     </div>
 
-<?php include "footer.php"; ?>
+</body>
+</html>

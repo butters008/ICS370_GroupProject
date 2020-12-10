@@ -11,6 +11,8 @@ if(isset($_POST["submit"])){
     require_once "dbh.inc.php";
     require_once "functions.inc.php";
 
+
+
     // if (emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
     //     header("location: ../signup.php?error=emptyinput");
     //     exit();
@@ -37,6 +39,22 @@ if(isset($_POST["submit"])){
     // }
 
     createProject($conn, $pName, $pType, $pQuote, $pAddress, $pCity, $pZip);
+
+
+    function createProject($conn, $pName, $pType, $pQuote, $pAddress, $pCity, $pZip){
+        $sql = "INSERT INTO project (project_name, project_type, project_quote, project_address, project_City, project_Zip) VALUES (?, ?, ?, ?, ?, ?);";
+        $stmt = mysqli_stmt_init($conn);
+        
+        if (!mysqli_stmt_prepare($stmt, $sql)){
+            header("location: ../project.php?error=stmtFailed");
+            exit();
+        }
+    
+        mysqli_stmt_bind_param($stmt, 'ssssss', $pName, $pType, $pQuote, $pAddress, $pCity, $pZip);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        header("location: ../index.php?error=none");
+    }
 
 
 }else{
